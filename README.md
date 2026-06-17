@@ -4,6 +4,16 @@
 
 第一版定位是“好看、清楚、能用、可维护”。不做登录、不接数据库、不做后台系统。
 
+## 页面预览
+
+首页与启动说明：
+
+![首页与启动说明](public/previews/home-start.png)
+
+Prompt 输出标准：
+
+![Prompt 输出标准](public/previews/prompt-standards.png)
+
 ## 技术栈
 
 - Next.js
