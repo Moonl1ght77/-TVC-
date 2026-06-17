@@ -10,7 +10,7 @@
 
 ![首页与启动说明](public/previews/home-start.png)
 
-Prompt 输出标准：
+Prompt 输出标准模块：
 
 ![Prompt 输出标准](public/previews/prompt-standards.png)
 
@@ -21,13 +21,37 @@ Prompt 输出标准：
 - Tailwind CSS
 - 本地 TypeScript 数据模块
 
-## 本地安装命令
+## 推荐启动方式：双击一键启动
+
+Windows 电脑上，直接双击项目根目录里的：
+
+```text
+启动TVC手册.cmd
+```
+
+它会自动执行：
+
+- 检查是否在项目根目录
+- 检查 Node.js 和 npm
+- 如果没有 `node_modules`，自动运行 `npm install`
+- 启动 `npm run dev`
+- 自动打开 `http://localhost:3000`
+
+真正的启动逻辑在：
+
+```text
+scripts/launch-dev.ps1
+```
+
+## 本地安装和手动启动
+
+如果不使用一键启动，也可以手动运行：
 
 ```bash
 npm install
 ```
 
-## 启动命令
+然后启动：
 
 ```bash
 npm run dev
@@ -49,11 +73,11 @@ npm run build
 
 ## 第二天复制到公司电脑后的操作步骤
 
-1. 复制整个项目文件夹，但不要复制 `node_modules` 和 `.next`。
+1. 复制整个项目文件夹，或使用 Git clone。
 2. 在公司电脑安装 Node.js。
-3. 打开终端进入项目目录。
-4. 执行 `npm install` 安装依赖。
-5. 执行 `npm run dev` 本地预览。
+3. 进入项目目录。
+4. 推荐直接双击 `启动TVC手册.cmd`。
+5. 如果不用一键启动，再手动执行 `npm install` 和 `npm run dev`。
 6. 如需确认可发布，执行 `npm run build`。
 
 ## 内容维护方式
@@ -108,8 +132,10 @@ TVC手册/
   data/
   lib/
   public/
+  scripts/
   .gitignore
   README.md
+  启动TVC手册.cmd
   package.json
   postcss.config.js
   tailwind.config.ts
