@@ -61,6 +61,23 @@ npm run build
 
 页面组件在 `components/` 目录。通常只改内容时，不需要改组件。
 
+## 随项目携带的 Skill
+
+项目已包含原始 Skill 文件：
+
+```text
+skills/my-brand-film-director/
+  README.md
+  SKILL.md
+```
+
+复制到公司电脑后，如果需要安装到 Codex 用户 Skill 目录，可参考：
+
+```powershell
+mkdir $HOME\.agents\skills\my-brand-film-director
+copy .\skills\my-brand-film-director\SKILL.md $HOME\.agents\skills\my-brand-film-director\SKILL.md
+```
+
 ## 后续扩展建议
 
 第一版不使用数据库。后续如果需要管理案例库，可以考虑 SQLite + Prisma。
